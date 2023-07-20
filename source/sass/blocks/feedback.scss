@@ -1,0 +1,39 @@
+.feedback {
+  position: relative;
+  padding: 15px 0 122px;
+
+  @include tablet {
+    padding: 15px 0 98px;
+  }
+
+  @include mobile {
+    padding: 15px 0 70px;
+  }
+}
+
+.feedback__title {
+  text-align: center;
+  margin: 0 0 37px 9px;
+
+  @include tablet {
+    margin: 0 0 39px -3px;
+  }
+
+  @include mobile {
+    margin: 0 0 42px -3px;
+  }
+}
+
+.feedback__slider {
+  width: 51%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 91.7%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}

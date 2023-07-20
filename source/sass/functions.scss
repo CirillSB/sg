@@ -1,0 +1,11 @@
+@function desktop-size($size-for-desktop) {
+  @return calc($size-for-desktop / $desktop-reference-viewport * 100vw);
+}
+
+@function tablet-size($size-for-tablet) {
+  @return calc($size-for-tablet / $tablet-reference-viewport * 100vw);
+}
+
+@function mobile-size($size-for-mobile) {
+  @return calc($size-for-mobile / $mobile-reference-viewport * 100vw);
+}

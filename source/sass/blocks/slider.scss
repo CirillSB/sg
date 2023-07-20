@@ -1,0 +1,149 @@
+.slider__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.slider__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1164px;
+
+  @include tablet {
+    width: calc(567 / 768 * 100%);
+  }
+
+  @include mobile {
+    width: calc(226 / 320 * 100%);
+  }
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider__item {
+  position: relative;
+
+  @include tablet {
+    width: 268px;
+  }
+
+  &:hover {
+    .coaches-card {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    p {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &:focus {
+    .coaches-card {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    p {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  p {
+    width: 100%;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    font-family: $ff-roboto-bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+  }
+}
+
+.slider__picture {
+  display: block;
+}
+
+.slider__image {
+  width: 100%;
+}
+
+.slider__button-wrapper {
+  position: relative;
+  width: calc(103 / 1366 * 100%);
+  // height: 100px;
+  height: 100%;
+
+  @include mobile {
+    width: 11%;
+  }
+}
+
+.slider__button {
+  top: 16%;
+  min-width: 90%;
+  height: 100%;
+  border: none;
+  background-color: $color-default-white;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        outline: 1px solid $color-torch-red;
+      }
+    }
+
+    &.focus-visible:focus {
+      background-color: $color-torch-red;
+    }
+  }
+
+  @include tablet {
+    top: 35%;
+    transform: scale(1);
+  }
+
+  @include mobile {
+    top: 50%;
+    transform: scale(0.55);
+  }
+
+  &--prev {
+    left: 0;
+
+    @include tablet {
+      left: 27px;
+    }
+
+    @include mobile {
+      left: 12%;
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    @include tablet {
+      left: -21px;
+    }
+
+    @include mobile {
+      left: 0;
+    }
+  }
+}

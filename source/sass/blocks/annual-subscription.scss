@@ -1,0 +1,114 @@
+.annual-subscription {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-torch-red;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.annual-subscription__description {
+  background-color: $color-torch-red;
+  padding: 32px 45px 44px;
+  width: 50%;
+
+  dl {
+    font-family: $ff-roboto-bold;
+    font-weight: 700;
+    color: $color-default-white;
+    margin: 0;
+
+    @include mobile {
+      text-align: center;
+    }
+
+    dt {
+      font-size: 28px;
+      line-height: 44px;
+      margin-bottom: -24px;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 70px;
+      line-height: 109px;
+
+      @include mobile {
+        margin-bottom: -6px;
+      }
+    }
+  }
+
+  p {
+    font-family: $ff-roboto-regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-default-white;
+    margin: 0 0 182px;
+
+    @include mobile {
+      margin: 0 0 26px;
+    }
+  }
+
+  @include tablet {
+    width: calc(279 / 678 * 100%);
+    padding: 32px 45px 45px;
+  }
+
+  @include mobile {
+    width: 100%;
+    text-align: center;
+    padding: 33px 45px 43px;
+  }
+}
+
+.annual-subscription__link {
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border-bottom: 1px solid $color-default-white;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        background-color: $color-default-white;
+        color: $color-torch-red;
+      }
+    }
+
+    &.focus-visible:focus {
+      background-color: $color-default-white;
+      color: $color-torch-red;
+    }
+  }
+}
+
+.annual-subscription__banner {
+  background-color: $color-persian-blue;
+  max-width: 50%;
+
+  @include tablet {
+    max-width: calc(399 / 678 * 100%);
+  }
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.annual-subscription__image {
+  height: 100%;
+
+  @include tablet {
+    width: 100%;
+  }
+}

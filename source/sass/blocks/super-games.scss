@@ -1,0 +1,57 @@
+.super-games {
+  max-width: 1366px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding-top: 71px;
+  }
+}
+
+.super-games__inner {
+  display: flex;
+  justify-content: flex-start;
+  padding: 43px 0 107px;
+
+  @include tablet {
+    padding: 3px 0 43px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 0 2px 43px;
+  }
+}
+
+.super-games__promo {
+  width: calc(500 / 1160 * 100%);
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.super-games__image {
+  width: calc(660 / 1160 * 100%);
+  min-height: 100%;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.super-games__picture {
+  height: 100%;
+}
+
+.super-games__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.super-games__date {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
